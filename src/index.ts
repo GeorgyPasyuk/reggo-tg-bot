@@ -4,12 +4,11 @@ import {connectCommands} from "@commands/botCommands";
 import {connectCallbackQueries} from "./callback-query";
 import {forumId} from "@shared/forum/forumId";
 
+require('dotenv').config();
 
-const { TG_TOKEN: test } = process.env;
+const { TG_TOKEN: token } = process.env;
 
-const token = '6703568202:AAFwhVdBEQkCZA6DBFYNg8Xb3ooFq34twcY'
 export const bot = new TelegramBot(token, { polling: true });
-
 bot.setMyCommands(menuCommands!);
 
 bot.on('text', async (msg)=> {

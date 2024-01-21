@@ -13,7 +13,8 @@
   "author": "pasyukgeorgy@yandex.ru",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "16.3.1",
+    "docker-compose": "^0.24.3",
+    "dotenv": "^16.3.1",
     "node-telegram-bot-api": "^0.64.0",
     "ts-loader": "9.4.4",
     "ts-node": "10.9.1",
