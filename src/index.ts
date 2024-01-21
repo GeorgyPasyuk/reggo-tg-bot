@@ -22,12 +22,7 @@ bot.on('text', async (msg)=> {
     }
 })
 
-bot.on('photo', async (msg) => {
-    console.log(msg)
-})
-bot.on('video', async (msg) => {
-    console.log(msg)
-})
+
 connectCommands();
 connectCallbackQueries()
 
