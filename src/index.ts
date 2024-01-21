@@ -13,7 +13,6 @@ bot.setMyCommands(menuCommands!);
 
 bot.on('text', async (msg)=> {
     if (msg.chat.id === forumId) {
-        console.log(msg.reply_to_message)
         const userId = msg.reply_to_message.forum_topic_created.name.split(' ')[1]
         await bot.sendMessage(userId, msg.text)
     } else {
