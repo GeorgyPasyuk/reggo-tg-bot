@@ -12,7 +12,7 @@ export const cloudQuery = () => {
                     cloudText
                 ).then(() => bot.addListener("photo", async (photo)=> {}))
                 bot.on('photo', async ()=> {
-                    console.log(ctx)
+
                     await bot.createForumTopic(forumId, `${ctx.message.chat.first_name} ${ctx.message.chat.id.toString()}`)
                     await bot.sendMessage(
                         ctx.message.chat.id,
