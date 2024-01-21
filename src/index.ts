@@ -21,6 +21,13 @@ bot.on('text', async (msg)=> {
         // await bot.sendMessage(forumId, msg.text, {message_thread_id: threadId})
     }
 })
+
+bot.on('photo', async (msg) => {
+    console.log(msg)
+})
+bot.on('video', async (msg) => {
+    console.log(msg)
+})
 connectCommands();
 connectCallbackQueries()
 
