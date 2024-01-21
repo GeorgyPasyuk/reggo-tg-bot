@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@index/*": ["index.ts"],
+      "@mark-up/*": ["mark-up/*"],
+      "@callback-query/*": ["callback-query/*"],
+      "@commands/*": ["bot-commands/*"],
+      "@shared/*": ["shared/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "global.d.ts"]
+}
