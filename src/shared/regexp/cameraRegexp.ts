@@ -9,7 +9,7 @@ export const babysitterEndR = /^babysitter-end$/
 export const babysitterVideoR =  /^babysitter-video$/
 export const fourgR =  /^fourG$/
 export const fourGNetErrR = /^fourG-net-err$/
-export const fourGEndR = /^babysitter-end$/
+export const fourGEndR = /^fourG-end$/
 export const fourgVideoR =  /^fourG-video$/
 
 

@@ -6,6 +6,7 @@ import {reqWifiText} from "@shared/text/req/req";
 import {wifiEndText, wifiProblemText} from "@shared/text/cameras/wifi/wifiText";
 import {wifiEndMU} from "@mark-up/cameras/wifiMU";
 import {phoneText} from "@shared/text/phone/phoneText";
+import {endErrMU} from "@mark-up/end-err/endErrMU";
 
 export const wifiQuery = () => {
     bot.on("callback_query", async (ctx) => {
@@ -24,17 +25,13 @@ export const wifiQuery = () => {
             } else if (wifiEndR.test(ctx.data)) {
                 await bot.sendMessage(
                     ctx.message.chat.id,
-                    wifiEndText,
+                    wifiEndText
                 )
                 await bot.sendVideo(
                     ctx.message.chat.id,
-                    wifiVideo
+                    wifiVideo,
+                    endErrMU
                 );
-                await bot.sendMessage(
-                    ctx.message.chat.id,
-                    phoneText,
-                );
-                await bot.sendContact(ctx.message.chat.id, "+79858153238", 'Поддержка REGGO')
             }
         } catch (error) {
             console.log(error);

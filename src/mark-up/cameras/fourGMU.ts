@@ -6,3 +6,11 @@ export const fourGMU = {
         ],
     },
 };
+
+export const fourGEndMU = {
+    reply_markup: {
+        inline_keyboard: [
+            [{ text: "Не помогает", callback_data: "fourG-end" }],
+        ],
+    },
+}

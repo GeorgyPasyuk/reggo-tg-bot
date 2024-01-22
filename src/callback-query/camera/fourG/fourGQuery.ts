@@ -2,7 +2,8 @@ import {bot} from "@index/*";
 import {fourGEndR, fourGNetErrR, fourgVideoR} from "@shared/regexp/cameraRegexp";
 import {fourGVideo} from "@shared/media/mediaFileId";
 import {fourGEndText, fourGProblemText} from "@shared/text/cameras/fourG/fourGText";
-import {phoneText} from "@shared/text/phone/phoneText";
+import {endErrMU} from "@mark-up/end-err/endErrMU";
+import {fourGEndMU} from "@mark-up/cameras/fourGMU";
 
 export const fourGQuery = () => {
     bot.on("callback_query", async (ctx) => {
@@ -16,6 +17,7 @@ export const fourGQuery = () => {
                 await bot.sendMessage(
                     ctx.message.chat.id,
                     fourGProblemText,
+                    fourGEndMU
                 );
             } else if (fourGEndR.test(ctx.data)) {
                 await bot.sendMessage(
@@ -25,12 +27,8 @@ export const fourGQuery = () => {
                 await bot.sendVideo(
                     ctx.message.chat.id,
                     fourGVideo,
+                    endErrMU
                 );
-                await bot.sendMessage(
-                    ctx.message.chat.id,
-                    phoneText,
-                );
-                await bot.sendContact(ctx.message.chat.id, "+79858153238", 'Поддержка REGGO')
             }
         } catch (error) {
             console.log(error);

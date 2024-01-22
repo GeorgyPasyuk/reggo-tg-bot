@@ -5,6 +5,7 @@ import {fourGQuery} from "@callback-query/camera/fourG/fourGQuery";
 import {faqQuery} from "@callback-query/faq/faqQuery";
 import {requirementsQuery} from "@callback-query/requirements/requirementsQuery";
 import {cloudQuery} from "@callback-query/cloud/cloudQuery";
+import {endErrQuery} from "@callback-query/end-err/endErrQuery";
 export const connectCallbackQueries = () => {
     cameraQuery()
     wifiQuery()
@@ -13,4 +14,5 @@ export const connectCallbackQueries = () => {
     cloudQuery()
     faqQuery()
     requirementsQuery()
+    endErrQuery()
 };
