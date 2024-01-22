@@ -3,6 +3,7 @@ import {startMarkup} from "@mark-up/start-markup";
 import {bot} from "../index";
 import {faqMU} from "@mark-up/faq/faqMU";
 import {forumId} from "@shared/forum/forumId";
+import {requestContactMU} from "@mark-up/request-contact/requestContactMU";
 
 export const connectCommands = () => {
     bot.on("text", async (msg) => {
