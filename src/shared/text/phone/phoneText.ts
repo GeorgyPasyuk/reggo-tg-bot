@@ -1,0 +1,1 @@
+export const phoneText = "Если данные шаги не помогли, напишите по номеру в WhatsApp ниже:"
