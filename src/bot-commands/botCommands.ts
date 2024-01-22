@@ -24,7 +24,7 @@ export const connectCommands = () => {
                     msg.chat.id,
                     "Номер телефона поддержки в WhatsApp",
                 );
-                await bot.sendContact(msg.chat.id, "+79858153238", 'Поддержка REGGO')
+                await bot.sendMessage(msg.chat.id, "+79858153238")
             }
         } catch (error) {
             console.log(error);
